@@ -20,4 +20,18 @@ public class StringListSearchTest {
         actualOutput = StringListSearch.unorderedSearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
     }
+
+    @Test
+    public void testOrderedSearch() {
+        ArrayList<String> inputItems;
+        String inputTerm;
+        int expectedOutput;
+        int actualOutput;
+
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "the";
+        expectedOutput = 2;
+        actualOutput = StringListSearch.unorderedSearch(inputItems, inputTerm);
+        assertEquals(expectedOutput, actualOutput);
+    }
 }
