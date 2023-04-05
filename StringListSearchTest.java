@@ -31,7 +31,21 @@ public class StringListSearchTest {
         inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
         inputTerm = "the";
         expectedOutput = 2;
-        actualOutput = StringListSearch.unorderedSearch(inputItems, inputTerm);
+        actualOutput = StringListSearch.orderedLinearSearch(inputItems, inputTerm);
+        assertEquals(expectedOutput, actualOutput);
+    }
+
+    @Test
+    public void testBinarySearch() {
+        ArrayList<String> inputItems;
+        String inputTerm;
+        int expectedOutput;
+        int actualOutput;
+
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "the";
+        expectedOutput = 2;
+        actualOutput = StringListSearch.orderedBinarySearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
     }
 }
